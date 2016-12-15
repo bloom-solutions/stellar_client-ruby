@@ -1,3 +1,4 @@
+require "active_support/core_ext/hash/indifferent_access"
 require "api_client_base"
 require "gem_config"
 require "virtus"
