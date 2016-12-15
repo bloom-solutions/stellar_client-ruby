@@ -20,13 +20,28 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Configure in an initializer:
+
+```ruby
+BridgeClient.configure do |c|
+  c.host = ENV["BRIDGE_HOST"]
+end
+```
+
+See `spec/acceptance` for detailed examples.
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+- Copy `spec/config.yml.sample` to `spec/config.yml`
+- Replace `destination` with the account the tests will be sending to
+- Copy `spec/fixtures/bridge/config_bridge.toml.sample` to `spec/fixtures/bridge/config_bridge.toml`
+- Replace `authorizing_seed` with the seed of the account you're sending from
+- Replace `receiving_account_id` with the account id you're sending from
+- Replace `base_seed` with what you placed in `authorizing_seed`
+- `docker-compose build`
+- `docker-compose up bridge`
+- Make your changes
+- `rspec spec`
 
 ## Contributing
 
