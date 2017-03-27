@@ -2,6 +2,7 @@ module BridgeClient
   class SendPaymentRequest < BaseRequest
 
     BODY_ATTRS = %i[
+      source
       destination
       amount
       asset_code
@@ -9,6 +10,7 @@ module BridgeClient
       memo_type
       memo
     ]
+    attribute :source, String
     attribute :destination, String
     attribute :amount, Float
     attribute :asset_code, String

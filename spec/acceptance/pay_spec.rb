@@ -5,7 +5,7 @@ RSpec.describe "Sending payments", vcr: {record: :once} do
   it "posts to /payment" do
     client = BridgeClient.new
     response = client.send_payment(
-      CONFIG.slice(:destination, :asset_issuer).merge(
+      CONFIG.slice(:destination, :source).merge(
         amount: 1,
         memo_type: "text",
         memo: "My memo",
