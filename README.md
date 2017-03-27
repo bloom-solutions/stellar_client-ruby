@@ -1,5 +1,7 @@
 # BridgeClient
 
+[![Build Status](https://travis-ci.org/imacchiato/bridge_client-ruby.svg?branch=master)](https://travis-ci.org/imacchiato/bridge_client-ruby)
+
 Ruby wrapper for Stellar's Bridge Server API
 
 ## Installation
