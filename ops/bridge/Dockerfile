@@ -7,9 +7,11 @@ RUN apt-get install -y build-essential libpq-dev nodejs postgresql-client
 RUN mkdir -p /app
 WORKDIR /app
 
-RUN curl -S -L -O https://github.com/stellar/bridge-server/releases/download/v0.0.14/bridge-v0.0.14-linux-amd64.tar.gz && \
-  tar zxf bridge-v0.0.14-linux-amd64.tar.gz && \
-  mv bridge-v0.0.14-linux-amd64 /bridge
+ENV BRIDGE_VERSION=v0.0.15
+RUN curl -S -L -O \
+  https://github.com/stellar/bridge-server/releases/download/$BRIDGE_VERSION/bridge-$BRIDGE_VERSION-linux-amd64.tar.gz && \
+  tar zxf bridge-$BRIDGE_VERSION-linux-amd64.tar.gz && \
+  mv bridge-$BRIDGE_VERSION-linux-amd64 /bridge
 RUN ln -ns /app/config_bridge.toml /bridge/config_bridge.toml
 
 ADD . /app
