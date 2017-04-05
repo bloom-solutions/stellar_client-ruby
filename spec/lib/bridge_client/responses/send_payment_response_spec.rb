@@ -13,6 +13,8 @@ module BridgeClient
       it { is_expected.to have_attribute(:hash, String) }
       it { is_expected.to have_attribute(:result_xdr, String) }
       it { is_expected.to have_attribute(:ledger, Integer) }
+      it { is_expected.to have_attribute(:code_str, String) }
+      it { is_expected.to have_attribute(:message, String) }
     end
 
     describe "#body" do
@@ -44,6 +46,20 @@ module BridgeClient
       let(:response) { described_class.new(body: {ledger: 292}) }
       it "is the body's ledger" do
         expect(response.ledger).to eq 292
+      end
+    end
+
+    describe "#code_str" do
+      let(:response) { described_class.new(body: {code: "payment_underfunded"}) }
+      it "is the body's code" do
+        expect(response.code_str).to eq "payment_underfunded"
+      end
+    end
+
+    describe "#message" do
+      let(:response) { described_class.new(body: {message: "Hi"}) }
+      it "is the body's message" do
+        expect(response.message).to eq "Hi"
       end
     end
 

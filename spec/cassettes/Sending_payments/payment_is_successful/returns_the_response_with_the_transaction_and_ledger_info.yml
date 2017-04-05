@@ -21,17 +21,17 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 27 Mar 2017 10:56:21 GMT
+      - Wed, 05 Apr 2017 07:31:40 GMT
       Content-Length:
       - '164'
     body:
       encoding: UTF-8
       string: |-
         {
-          "hash": "9b3b047551994bb1580cc3a073609404d78fdbe24d3e621e52e3a8ecd206bf28",
+          "hash": "d147b325f65aaa7caa20b06cc14242d5a5fabf63b8d38d181fd77af1440a4c9e",
           "result_xdr": "AAAAAAAAAGQAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAA=",
-          "ledger": 164595
+          "ledger": 342548
         }
     http_version: 
-  recorded_at: Tue, 28 Mar 2017 01:49:10 GMT
+  recorded_at: Wed, 05 Apr 2017 07:31:40 GMT
 recorded_with: VCR 3.0.3
