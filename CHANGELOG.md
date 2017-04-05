@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Added
+- Expose response's `code` (as `code_str`) and `message`
+
 ## [0.3.0] - 2017-03-31
 ### Changed
 - Use `api_client_base` `~> 1.0`
