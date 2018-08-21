@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Ruby wrapper for Stellar's Stellar Server API}
   spec.description   = %q{Ruby wrapper for Stellar's Stellar Server API}
-  spec.homepage      = "https://github.com/imacchiato/stellar_client-ruby"
+  spec.homepage      = "https://github.com/bloom-solutions/stellar_client-ruby"
   spec.license       = "MIT"
 
   if spec.respond_to?(:metadata)

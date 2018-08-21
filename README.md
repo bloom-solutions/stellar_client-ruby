@@ -1,6 +1,6 @@
 # StellarClient
 
-[![Build Status](https://travis-ci.org/imacchiato/stellar_client-ruby.svg?branch=master)](https://travis-ci.org/imacchiato/stellar_client-ruby)
+[![Build Status](https://travis-ci.org/bloom-solutions/stellar_client-ruby.svg?branch=master)](https://travis-ci.org/bloom-solutions/stellar_client-ruby)
 
 Ruby wrapper for Stellar's Bridge Server API
 
@@ -47,7 +47,7 @@ See `spec/acceptance` for detailed examples.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/imacchiato/stellar_client-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/bloom-solutions/stellar_client-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
