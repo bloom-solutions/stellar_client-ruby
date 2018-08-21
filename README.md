@@ -26,7 +26,7 @@ Configure in an initializer:
 
 ```ruby
 StellarClient.configure do |c|
-  c.host = ENV["BRIDGE_HOST"]
+  c.bridge_host = ENV["BRIDGE_HOST"]
 end
 ```
 

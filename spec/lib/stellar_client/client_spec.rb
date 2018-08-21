@@ -5,7 +5,7 @@ module StellarClient
 
     describe "attributes" do
       subject { described_class }
-      it { is_expected.to have_attribute(:host, String) }
+      it { is_expected.to have_attribute(:bridge_host, String) }
     end
 
   end

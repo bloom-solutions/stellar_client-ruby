@@ -1,4 +1,5 @@
 require "active_support/core_ext/hash/indifferent_access"
+require "addressable"
 require "api_client_base"
 require "gem_config"
 require "virtus"
@@ -15,12 +16,15 @@ module StellarClient
   include GemConfig::Base
 
   with_configuration do
-    has :host, classes: String
+    has :bridge_host, classes: String
   end
 
   def self.new(options={})
+    bridge_host = options[:bridge_host] ||
+      StellarClient.configuration.bridge_host
+
     Client.new(
-      host: options[:host] || StellarClient.configuration.host,
+      bridge_host: bridge_host,
     )
   end
 
