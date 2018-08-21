@@ -1,4 +1,4 @@
 ---
 source: SBT5 # asset issuer seed
 destination: GDGC3
-host: "http://localhost:8001"
+bridge_host: "http://localhost:8001"

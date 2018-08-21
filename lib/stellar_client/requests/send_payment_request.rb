@@ -39,5 +39,11 @@ module StellarClient
       end
     end
 
+    def default_uri
+      uri = Addressable::URI.parse(bridge_host)
+      uri.path = api_client_base_path
+      uri.to_s
+    end
+
   end
 end

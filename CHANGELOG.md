@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Changed
 - Renamed from BridgeClient to StellarClient
+- `host` configuration is now `bridge_host`
 
 ## [0.4.0] - 2017-04-05
 ### Added

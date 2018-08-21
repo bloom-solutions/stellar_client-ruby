@@ -12,7 +12,7 @@ CONFIG_YML = SPEC_DIR.join("config.yml")
 CONFIG = YAML.load_file(CONFIG_YML).with_indifferent_access
 
 StellarClient.configure do |c|
-  c.host = CONFIG[:host]
+  c.bridge_host = CONFIG[:bridge_host]
 end
 
 VCR.configure do |c|
