@@ -12,7 +12,7 @@ mac_key = ""
 
 [database]
 type = "postgres"
-url = "postgres://postgres@bridge_db/postgres?sslmode=disable"
+url = "postgres://postgres@pg/bridge?sslmode=disable"
 
 [accounts]
 authorizing_seed = "SAP"

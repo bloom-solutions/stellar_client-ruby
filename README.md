@@ -40,8 +40,15 @@ See `spec/acceptance` for detailed examples.
 - Replace `authorizing_seed` with the seed of the account you're sending from
 - Replace `receiving_account_id` with the account id you're sending from
 - Replace `base_seed` with what you placed in `authorizing_seed`
-- `docker-compose build`
-- `docker-compose up bridge`
+- `docker-compose run bridge createdb -h pg -U postgres bridge`
+- This:
+```sh
+docker-compose run stellar_app bash -c \
+  'bundle install && \
+   bundle exec rails db:create db:migrate && \
+   bundle exec yarn install'
+```
+- `docker-compose up bridge stellar_app`
 - Make your changes
 - `rspec spec`
 

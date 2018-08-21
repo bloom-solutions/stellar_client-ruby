@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   bridge:
     build:
@@ -8,15 +8,30 @@ services:
     ports:
       - "8001:8001"
     depends_on:
-      - bridge_db
+      - pg
     volumes:
       - ./spec/fixtures/bridge:/app
-  bridge_db:
+  pg:
     image: postgres:9.6
     ports:
       - "5432:5432"
     volumes:
-      - bridge_db:/var/lib/postgresql/data
+      - pg:/var/lib/postgresql/data
+  stellar_app:
+    build: spec/stellar_app
+    command: bash -c "bundle exec rails s -p 3000 -b 0.0.0.0"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./spec/stellar_app:/app
+      - bundle:/bundle
+    depends_on:
+      - pg
+  bundle:
+    image: busybox
+    volumes:
+      - /bundle
 volumes:
-  bridge_db:
+  pg:
   bridge:
+  bundle:
