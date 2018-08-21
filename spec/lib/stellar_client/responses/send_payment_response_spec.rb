@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module BridgeClient
+module StellarClient
   RSpec.describe SendPaymentResponse, type: %i[virtus] do
 
     it "inherits from BaseResponse" do

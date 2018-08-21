@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module BridgeClient
+module StellarClient
   RSpec.describe Client, type: %i[virtus] do
 
     describe "attributes" do

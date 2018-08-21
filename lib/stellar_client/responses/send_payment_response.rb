@@ -1,4 +1,4 @@
-module BridgeClient
+module StellarClient
   class SendPaymentResponse < BaseResponse
 
     attribute :body, Coercers::IndifferentHash, lazy: true, default: :default_body

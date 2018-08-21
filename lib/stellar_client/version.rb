@@ -1,3 +1,3 @@
-module BridgeClient
+module StellarClient
   VERSION = "0.4.0"
 end
