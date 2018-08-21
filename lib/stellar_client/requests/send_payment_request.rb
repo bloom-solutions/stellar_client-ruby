@@ -1,4 +1,4 @@
-module BridgeClient
+module StellarClient
   class SendPaymentRequest < BaseRequest
 
     BODY_ATTRS = %i[

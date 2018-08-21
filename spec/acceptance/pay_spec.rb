@@ -4,7 +4,7 @@ RSpec.describe "Sending payments", vcr: {record: :once} do
 
   context "payment is successful" do
     it "returns the response with the transaction and ledger info" do
-      client = BridgeClient.new
+      client = StellarClient.new
       response = client.send_payment(
         CONFIG.slice(:destination, :source).merge(
           amount: 1,
@@ -22,7 +22,7 @@ RSpec.describe "Sending payments", vcr: {record: :once} do
 
   context "payment is not successful" do
     it "returns the response with the code and message" do
-      client = BridgeClient.new
+      client = StellarClient.new
       response = client.send_payment(
         CONFIG.slice(:destination, :source).merge(amount: 100_000_000_000)
       )

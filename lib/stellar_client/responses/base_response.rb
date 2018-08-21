@@ -1,4 +1,4 @@
-module BridgeClient
+module StellarClient
   class BaseResponse
 
     include APIClientBase::Response.module

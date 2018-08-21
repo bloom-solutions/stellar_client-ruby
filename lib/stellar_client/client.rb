@@ -1,4 +1,4 @@
-module BridgeClient
+module StellarClient
   class Client
 
     include APIClientBase::Client.module(default_opts: :default_opts)

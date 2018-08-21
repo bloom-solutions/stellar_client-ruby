@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'bridge_client/version'
+require 'stellar_client/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "bridge_client"
-  spec.version       = BridgeClient::VERSION
+  spec.name          = "stellar_client"
+  spec.version       = StellarClient::VERSION
   spec.authors       = ["Ramon Tayag"]
   spec.email         = ["ramon.tayag@gmail.com"]
 
-  spec.summary       = %q{Ruby wrapper for Stellar's Bridge Server API}
-  spec.description   = %q{Ruby wrapper for Stellar's Bridge Server API}
-  spec.homepage      = "https://github.com/imacchiato/bridge_client-ruby"
+  spec.summary       = %q{Ruby wrapper for Stellar's Stellar Server API}
+  spec.description   = %q{Ruby wrapper for Stellar's Stellar Server API}
+  spec.homepage      = "https://github.com/imacchiato/stellar_client-ruby"
   spec.license       = "MIT"
 
   if spec.respond_to?(:metadata)

@@ -1,6 +1,6 @@
-# BridgeClient
+# StellarClient
 
-[![Build Status](https://travis-ci.org/imacchiato/bridge_client-ruby.svg?branch=master)](https://travis-ci.org/imacchiato/bridge_client-ruby)
+[![Build Status](https://travis-ci.org/imacchiato/stellar_client-ruby.svg?branch=master)](https://travis-ci.org/imacchiato/stellar_client-ruby)
 
 Ruby wrapper for Stellar's Bridge Server API
 
@@ -9,7 +9,7 @@ Ruby wrapper for Stellar's Bridge Server API
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'bridge_client'
+gem 'stellar_client'
 ```
 
 And then execute:
@@ -18,14 +18,14 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install bridge_client
+    $ gem install stellar_client
 
 ## Usage
 
 Configure in an initializer:
 
 ```ruby
-BridgeClient.configure do |c|
+StellarClient.configure do |c|
   c.host = ENV["BRIDGE_HOST"]
 end
 ```
@@ -47,7 +47,7 @@ See `spec/acceptance` for detailed examples.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/imacchiato/bridge_client-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/imacchiato/stellar_client-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 

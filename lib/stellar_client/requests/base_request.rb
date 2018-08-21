@@ -1,4 +1,4 @@
-module BridgeClient
+module StellarClient
   class BaseRequest
 
     include APIClientBase::Request.module(default_opts: :default_opts)

@@ -1,8 +1,8 @@
 require "spec_helper"
 
-describe BridgeClient do
+describe StellarClient do
   it "has a version number" do
-    expect(BridgeClient::VERSION).not_to be nil
+    expect(StellarClient::VERSION).not_to be nil
   end
 
   it "is configurable" do
