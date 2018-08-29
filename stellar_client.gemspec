@@ -31,7 +31,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "gem_config", "~> 0.3.1"
   spec.add_dependency "typhoeus", "~> 1.1"
   spec.add_dependency "virtus", "~> 1.0"
-  spec.add_dependency "api_client_base", "~> 1.0"
+  spec.add_dependency "api_client_base", "~> 1.3"
   spec.add_dependency "activesupport", ">= 3.0.0"
   spec.add_dependency "addressable"
   spec.add_dependency "tomlrb", "~> 1.0"
