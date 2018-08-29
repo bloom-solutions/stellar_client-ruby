@@ -19,7 +19,6 @@ end
 
 require "stellar_client/client"
 require "stellar_client/coercers/indifferent_hash"
-require "stellar_client/requests/base_request"
 require "stellar_client/requests/get_toml_request"
 require "stellar_client/requests/send_payment_request"
 require "stellar_client/responses/base_response"

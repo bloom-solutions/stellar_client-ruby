@@ -1,5 +1,7 @@
 module StellarClient
-  class SendPaymentRequest < BaseRequest
+  class SendPaymentRequest
+
+    include APIClientBase::Request.module(default_opts: :default_opts)
 
     BODY_ATTRS = %i[
       source
@@ -18,6 +20,7 @@ module StellarClient
     attribute :memo_type, String
     attribute :memo, String
     attribute :body, Hash, lazy: true, default: :default_body
+    attribute :bridge_host, String
 
     private
 
@@ -43,6 +46,10 @@ module StellarClient
       uri = Addressable::URI.parse(bridge_host)
       uri.path = api_client_base_path
       uri.to_s
+    end
+
+    def default_opts
+      { bridge_host: bridge_host }
     end
 
   end
