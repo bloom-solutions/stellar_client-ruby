@@ -3,10 +3,6 @@ require 'spec_helper'
 module StellarClient
   RSpec.describe SendPaymentRequest, type: %i[virtus] do
 
-    it "inherits from BaseRequest" do
-      expect(SendPaymentRequest < BaseRequest).to be true
-    end
-
     describe "attributes" do
       subject { described_class }
       it { is_expected.to have_attribute(:source, String) }

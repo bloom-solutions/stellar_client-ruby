@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Renamed from BridgeClient to StellarClient
 - `host` configuration is now `bridge_host`
 
+### Added
+- `#get_toml` to fetch the toml of `host`
+- `#get_withdraw` to get withdrawal details from an Anchor
+
 ## [0.4.0] - 2017-04-05
 ### Added
 - Expose response's `code` (as `code_str`) and `message`

@@ -36,12 +36,21 @@ See `spec/acceptance` for detailed examples.
 
 - Copy `spec/config.yml.sample` to `spec/config.yml`
 - Replace `destination` with the account the tests will be sending to
-- Copy `spec/fixtures/bridge/config_bridge.toml.sample` to `spec/fixtures/bridge/config_bridge.toml`
+- Copy `spec/fixtures/bridge/bridge.cfg.sample` to `spec/fixtures/bridge/bridge.cfg`
 - Replace `authorizing_seed` with the seed of the account you're sending from
 - Replace `receiving_account_id` with the account id you're sending from
 - Replace `base_seed` with what you placed in `authorizing_seed`
-- `docker-compose build`
+- `docker-compose up pg`
+- `docker-compose run bridge createdb -h pg -U postgres bridge`
 - `docker-compose up bridge`
+- Then start the application that we'll run some tests against:
+```sh
+cd spec/stellar_app
+bundle
+yarn install
+rails db:create db:migrate
+rails s
+```
 - Make your changes
 - `rspec spec`
 
