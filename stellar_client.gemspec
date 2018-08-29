@@ -34,6 +34,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "api_client_base", "~> 1.0"
   spec.add_dependency "activesupport", ">= 3.0.0"
   spec.add_dependency "addressable"
+  spec.add_dependency "tomlrb", "~> 1.0"
 
   spec.add_development_dependency "bundler", "~> 1.13"
   spec.add_development_dependency "rake", "~> 10.0"
