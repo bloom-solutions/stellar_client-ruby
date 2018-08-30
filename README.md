@@ -2,7 +2,11 @@
 
 [![Build Status](https://travis-ci.org/bloom-solutions/stellar_client-ruby.svg?branch=master)](https://travis-ci.org/bloom-solutions/stellar_client-ruby)
 
-Ruby wrapper for Stellar's Bridge Server API
+Ruby wrapper for Stellar's different APIs including:
+
+- [TOML file / SEP 0001](https://github.com/stellar/stellar-protocol/blob/master/ecosystem/sep-0001.md)
+- [transfer server / SEP 0006](https://github.com/stellar/stellar-protocol/blob/master/ecosystem/sep-0006.md)
+- [bridge API](https://github.com/stellar/bridge-server/blob/master/readme_bridge.md)
 
 ## Installation
 
@@ -26,11 +30,12 @@ Configure in an initializer:
 
 ```ruby
 StellarClient.configure do |c|
-  c.bridge_host = ENV["BRIDGE_HOST"]
+  c.host = "https://domain.that.has.the.stellar.toml"
+  c.bridge_host = "https://bridge.com" # if you will be making calls to bridge
 end
 ```
 
-See `spec/acceptance` for detailed examples.
+See `spec/acceptance` for detailed examples and what is supported.
 
 ## Development
 
