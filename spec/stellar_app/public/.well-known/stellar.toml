@@ -1,1 +1,1 @@
-TRANSFER_SERVER = "http://localhost:3000/stellar/withdraw"
+TRANSFER_SERVER = "http://localhost:3000/stellar"
