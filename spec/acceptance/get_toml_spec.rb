@@ -9,8 +9,7 @@ RSpec.describe "#get_toml" do
     toml = response.toml
 
     expect(response).to be_success
-    expect(toml["TRANSFER_SERVER"]).
-      to eq "http://localhost:3000/stellar/withdraw"
+    expect(toml["TRANSFER_SERVER"]).to eq "http://localhost:3000/stellar"
   end
 
 end

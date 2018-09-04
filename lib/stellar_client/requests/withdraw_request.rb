@@ -14,6 +14,10 @@ module StellarClient
 
     private
 
+    def path
+      [Addressable::URI.parse(host).path, "/withdraw"].join
+    end
+
     def params
       BODY_ATTRS.each_with_object({}) do |attr, hash|
         hash[attr] = send(attr)
