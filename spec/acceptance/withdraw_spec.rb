@@ -4,8 +4,12 @@ RSpec.describe "Withdrawing", vcr: {record: :once} do
 
   it "creates a withdrawal request" do
     client = StellarClient.new(CONFIG.slice(:host))
-    response = client.
-      withdraw(type: "crypto", asset_code: "BTC", dest: "my-btc-address")
+
+    response = client.withdraw(
+      type: "crypto",
+      asset_code: "BTCT",
+      dest: "my-btc-address",
+    )
 
     expect(response).to be_success
     expect(response.account_id).to be_present

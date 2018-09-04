@@ -13,7 +13,7 @@ StellarBase.configure do |c|
     {
       type: "crypto",
       network: "bitcoin",
-      asset_code: "BTC",
+      asset_code: "BTCT",
       issuer: "G-ISSUER",
       fee_fixed: 0.001,
     }
