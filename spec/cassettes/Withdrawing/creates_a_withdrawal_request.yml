@@ -17,7 +17,7 @@ http_interactions:
       message: OK
     headers:
       Last-Modified:
-      - Tue, 04 Sep 2018 06:22:36 GMT
+      - Tue, 04 Sep 2018 06:59:05 GMT
       Content-Type:
       - text/plain
       Content-Length:
@@ -28,10 +28,10 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Tue, 04 Sep 2018 06:22:56 GMT
+  recorded_at: Tue, 04 Sep 2018 10:01:26 GMT
 - request:
     method: get
-    uri: http://localhost:3000/stellar/withdraw?asset_code=BTC&dest=my-btc-address&type=crypto
+    uri: http://localhost:3000/stellar/withdraw?asset_code=BTCT&dest=my-btc-address&type=crypto
     body:
       encoding: US-ASCII
       string: ''
@@ -60,18 +60,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"cd4ed2e37d349f9d4353d2edc6f4e826"
+      - W/"73b33f2ba45169ec58a9475264a72ba1"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f08a5863-ef1d-4f5b-9285-d342f885010b
+      - 81a2d401-411d-406e-969e-001135fe7707
       X-Runtime:
-      - '0.180719'
+      - '0.098415'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"account_id":"G-DISTRIBUTION","memo_type":"text","memo":"M9SUQ0KD","min_amount":"0.0","fee_fixed":"0.001","fee_percent":"0.0","fee_network":"0.0001"}'
+      string: '{"account_id":"G-DISTRIBUTION","memo_type":"text","memo":"VETX8N2Q","min_amount":"0.0","fee_fixed":"0.001","fee_percent":"0.0","fee_network":"0.0001"}'
     http_version: 
-  recorded_at: Tue, 04 Sep 2018 06:22:56 GMT
+  recorded_at: Tue, 04 Sep 2018 10:01:26 GMT
 recorded_with: VCR 4.0.0

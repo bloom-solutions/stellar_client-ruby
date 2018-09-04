@@ -7,7 +7,7 @@ RSpec.describe "Withdrawing", vcr: {record: :once} do
 
     response = client.withdraw(
       type: "crypto",
-      asset_code: "BTC",
+      asset_code: "BTCT",
       dest: "my-btc-address",
     )
 
