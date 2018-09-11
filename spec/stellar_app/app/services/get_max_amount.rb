@@ -1,7 +1,9 @@
 class GetMaxAmount
 
+  SAMPLE_HOT_WALLET_BALANCE = 1
+
   def self.call
-    1
+    SAMPLE_HOT_WALLET_BALANCE
   end
 
 end
