@@ -16,6 +16,7 @@ StellarBase.configure do |c|
       asset_code: "BTCT",
       issuer: "G-ISSUER",
       fee_fixed: 0.001,
+      max_amount_from: GetMaxAmount.to_s,
     }
   ]
 end
