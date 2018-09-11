@@ -1,7 +1,6 @@
-require 'spec_helper'
+require "spec_helper"
 
-RSpec.describe "Withdrawing", vcr: {record: :once} do
-
+RSpec.describe "Withdrawing", vcr: { record: :once } do
   it "creates a withdrawal request" do
     client = StellarClient.new(CONFIG.slice(:host))
 
@@ -19,6 +18,8 @@ RSpec.describe "Withdrawing", vcr: {record: :once} do
     expect(response.fee_percent).to be_present
     expect(response.fee_fixed).to be_present
     expect(response.fee_network).to be_present
-  end
 
+    # From spec/stellar_app/services/get_max_amount::SAMPLE_HOT_WALLET_BALANCE
+    expect(response.max_amount).to eq 1
+  end
 end
