@@ -6,10 +6,12 @@ module StellarClient
       memo_type
       memo
       min_amount
+      max_amount
       fee_fixed
       fee_percent
       fee_network
     ].freeze
+
     attribute(:body, Coercers::IndifferentHash, {
       lazy: true,
       default: :default_body,
@@ -18,6 +20,7 @@ module StellarClient
     attribute :memo_type, String, lazy: true, default: :default_memo_type
     attribute :memo, String, lazy: true, default: :default_memo
     attribute :min_amount, BigDecimal, lazy: true, default: :default_min_amount
+    attribute :max_amount, BigDecimal, lazy: true, default: :default_max_amount
     attribute :fee_fixed, BigDecimal, lazy: true, default: :default_fee_fixed
     attribute(:fee_percent, BigDecimal, {
       lazy: true,

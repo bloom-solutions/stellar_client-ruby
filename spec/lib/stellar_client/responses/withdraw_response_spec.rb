@@ -8,6 +8,7 @@ module StellarClient
       it { is_expected.to have_attribute(:memo_type, String) }
       it { is_expected.to have_attribute(:memo, String) }
       it { is_expected.to have_attribute(:min_amount, BigDecimal) }
+      it { is_expected.to have_attribute(:max_amount, BigDecimal) }
       it { is_expected.to have_attribute(:fee_fixed, BigDecimal) }
       it { is_expected.to have_attribute(:fee_percent, BigDecimal) }
       it { is_expected.to have_attribute(:fee_network, BigDecimal) }
