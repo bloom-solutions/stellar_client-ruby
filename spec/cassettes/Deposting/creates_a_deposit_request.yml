@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/.well-known/stellar.toml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Last-Modified:
+      - Tue, 04 Sep 2018 12:26:11 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '50'
+    body:
+      encoding: UTF-8
+      string: 'TRANSFER_SERVER = "http://localhost:3000/stellar"
+
+'
+    http_version: 
+  recorded_at: Thu, 27 Sep 2018 10:28:09 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/stellar/deposit?account=G-MYACCOUNT&asset_code=BTCT&email_address=&memo=&memo_type=&type=crypto
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"bc9502dd0708ec8365b79f12d48a5ddc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0ca2552c-cb12-49d3-b0c0-c8020e73fa59
+      X-Runtime:
+      - '0.123468'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"how":"1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2k","eta":600,"min_amount":"0.0","max_amount":"1.0","fee_fixed":"0.00001","fee_percent":"0.0"}'
+    http_version: 
+  recorded_at: Thu, 27 Sep 2018 10:28:10 GMT
+recorded_with: VCR 4.0.0
