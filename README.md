@@ -53,7 +53,9 @@ See `spec/acceptance` for detailed examples and what is supported.
 cd spec/stellar_app
 bundle
 yarn install
-rails db:create db:migrate
+rails db:create
+rails stellar_base:install:migrations
+rails db:migrate
 rails s
 ```
 - Make your changes
