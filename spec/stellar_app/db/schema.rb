@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_29_075340) do
+ActiveRecord::Schema.define(version: 2018_09_27_102214) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,27 @@ ActiveRecord::Schema.define(version: 2018_08_29_075340) do
     t.index ["memo"], name: "index_stellar_base_bridge_callbacks_on_memo"
     t.index ["operation_id"], name: "index_stellar_base_bridge_callbacks_on_operation_id", unique: true
     t.index ["transaction_id"], name: "index_stellar_base_bridge_callbacks_on_transaction_id"
+  end
+
+  create_table "stellar_base_deposit_requests", force: :cascade do |t|
+    t.string "asset_type", null: false
+    t.string "asset_code", null: false
+    t.string "memo_type"
+    t.string "memo"
+    t.string "account_id", null: false
+    t.string "issuer", null: false
+    t.string "email_address"
+    t.string "deposit_address", null: false
+    t.string "deposit_type"
+    t.integer "eta"
+    t.decimal "min_amount", default: "0.0", null: false
+    t.decimal "max_amount"
+    t.decimal "fee_fixed", default: "0.0", null: false
+    t.decimal "fee_percent", default: "0.0", null: false
+    t.string "extra_info"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["asset_type", "asset_code"], name: "index_stellar_base_deposit_requests_on_asset"
   end
 
   create_table "stellar_base_withdrawal_requests", force: :cascade do |t|

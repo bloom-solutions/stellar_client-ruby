@@ -4,7 +4,7 @@ require "pry-byebug"
 require "pathname"
 require "active_support/core_ext/hash/indifferent_access"
 require "active_support/json"
-require 'vcr'
+require "vcr"
 require "stellar_client"
 
 SPEC_DIR = Pathname.new(File.dirname(__FILE__))
