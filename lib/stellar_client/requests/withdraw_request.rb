@@ -15,7 +15,7 @@ module StellarClient
     private
 
     def path
-      [Addressable::URI.parse(host).path, "/withdraw"].join
+      "/withdraw"
     end
 
     def params
