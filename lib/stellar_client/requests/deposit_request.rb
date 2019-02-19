@@ -21,7 +21,7 @@ module StellarClient
     private
 
     def path
-      [Addressable::URI.parse(host).path, "/deposit"].join
+      "/deposit"
     end
 
     def params
