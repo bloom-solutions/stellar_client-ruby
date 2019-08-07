@@ -3,6 +3,6 @@ language: ruby
 cache: bundler
 rvm:
   - 2.5.1
-before_install: gem install bundler -v 1.16.2
+before_install: gem install bundler -v 1.16.6
 before_script:
   - cp spec/config.yml{.sample,}
