@@ -19,6 +19,13 @@ module StellarClient
       DepositResponse.new(raw_response: raw_response)
     end
 
+    def get_fees(opts = {})
+      transfer_host = get_toml.toml["TRANSFER_SERVER"]
+      request = GetFeesRequest.new(opts.merge(host: transfer_host))
+      raw_response = request.()
+      GetFeesResponse.new(raw_response: raw_response)
+    end
+
     attribute :bridge_host, String
 
     private
