@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/.well-known/stellar.toml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/toml; charset=utf-8
+      Etag:
+      - W/"7b892b379327cc0a56dbbab0351fcc8a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d2115c5f-258f-4f9f-9053-717afa54c4c7
+      X-Runtime:
+      - '0.046509'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: 'TRANSFER_SERVER = "http://localhost:3000/stellar"
+
+'
+    http_version: 
+  recorded_at: Wed, 07 Aug 2019 12:43:58 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/stellar/fee?amount=0.001&asset_code=BTCT&operation=deposit&type=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"074c51b8c49153041b8c82ee302b2791"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7daab749-f130-4bfa-bede-aba005e54097
+      X-Runtime:
+      - '0.135917'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"fee":"0.0"}'
+    http_version: 
+  recorded_at: Wed, 07 Aug 2019 12:43:58 GMT
+recorded_with: VCR 4.0.0

@@ -1,0 +1,96 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/.well-known/stellar.toml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/toml; charset=utf-8
+      Etag:
+      - W/"7b892b379327cc0a56dbbab0351fcc8a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 533db13a-41b1-484a-a0a6-7011f5506f50
+      X-Runtime:
+      - '0.093067'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: 'TRANSFER_SERVER = "http://localhost:3000/stellar"
+
+'
+    http_version: 
+  recorded_at: Wed, 07 Aug 2019 12:52:54 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/stellar/fee?amount=&asset_code=BZST&operation=depozist&type=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Expect:
+      - ''
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - ac4165cd-0a7b-4c64-8f40-31a997684de2
+      X-Runtime:
+      - '0.028181'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"error":{"asset_code":["invalid asset_code. Valid asset_codes: BTCT"],"operation":["depozist
+        is not a valid operation"],"amount":["can''t be blank"]}}'
+    http_version: 
+  recorded_at: Wed, 07 Aug 2019 12:52:54 GMT
+recorded_with: VCR 4.0.0
