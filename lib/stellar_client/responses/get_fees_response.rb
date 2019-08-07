@@ -6,6 +6,7 @@ module StellarClient
       default: :default_body,
     })
     attribute :fee, BigDecimal, lazy: true, default: :default_fee
+    attribute :error, String, lazy: true, default: :default_error
 
     private
 
@@ -17,5 +18,8 @@ module StellarClient
       body[:fee]
     end
 
+    def default_error
+      body[:error]
+    end
   end
 end
