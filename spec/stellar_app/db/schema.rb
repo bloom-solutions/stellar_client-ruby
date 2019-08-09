@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_27_102214) do
+ActiveRecord::Schema.define(version: 2019_08_08_072946) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "stellar_base_account_subscriptions", force: :cascade do |t|
+    t.string "address", null: false
+    t.string "cursor"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["address"], name: "index_stellar_base_account_subscriptions_on_address", unique: true
+  end
 
   create_table "stellar_base_bridge_callbacks", force: :cascade do |t|
     t.string "operation_id", null: false
@@ -55,6 +63,38 @@ ActiveRecord::Schema.define(version: 2018_09_27_102214) do
     t.index ["asset_type", "asset_code"], name: "index_stellar_base_deposit_requests_on_asset"
   end
 
+  create_table "stellar_base_deposits", force: :cascade do |t|
+    t.integer "deposit_request_id"
+    t.string "tx_id"
+    t.decimal "amount"
+    t.string "stellar_tx_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["deposit_request_id", "tx_id"], name: "index_stellar_base_deposits_on_deposit_request_id_and_tx_id", unique: true
+    t.index ["deposit_request_id"], name: "index_stellar_base_deposits_on_deposit_request_id"
+    t.index ["tx_id"], name: "index_stellar_base_deposits_on_tx_id"
+  end
+
+  create_table "stellar_base_stellar_operations", force: :cascade do |t|
+    t.string "operation_id", null: false
+    t.string "transaction_hash", null: false
+    t.string "type"
+    t.text "data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["operation_id"], name: "index_stellar_base_stellar_operations_on_operation_id", unique: true
+  end
+
+  create_table "stellar_base_stellar_transactions", force: :cascade do |t|
+    t.string "transaction_id", null: false
+    t.string "memo"
+    t.string "memo_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["memo"], name: "index_stellar_base_stellar_transactions_on_memo"
+    t.index ["transaction_id"], name: "index_stellar_base_stellar_transactions_on_transaction_id", unique: true
+  end
+
   create_table "stellar_base_withdrawal_requests", force: :cascade do |t|
     t.string "asset_type", null: false
     t.string "asset_code", null: false
@@ -69,11 +109,11 @@ ActiveRecord::Schema.define(version: 2018_09_27_102214) do
     t.decimal "max_amount"
     t.decimal "fee_fixed", default: "0.0", null: false
     t.decimal "fee_percent", default: "0.0", null: false
-    t.decimal "fee_network", default: "0.0", null: false
     t.string "extra_info"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["asset_type", "asset_code"], name: "index_stellar_base_withdrawal_requests_on_asset"
   end
 
+  add_foreign_key "stellar_base_deposits", "stellar_base_deposit_requests", column: "deposit_request_id"
 end

@@ -7,10 +7,12 @@ module StellarClient
       type
       asset_code
       dest
+      dest_extra
     ]
     attribute :type, String
     attribute :asset_code, String
     attribute :dest, String
+    attribute :dest_extra, String
 
     private
 

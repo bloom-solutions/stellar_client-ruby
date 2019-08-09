@@ -17,7 +17,6 @@ RSpec.describe "Withdrawing", vcr: { record: :once } do
     expect(response.min_amount).to be_present
     expect(response.fee_percent).to be_present
     expect(response.fee_fixed).to be_present
-    expect(response.fee_network).to be_present
 
     # From spec/stellar_app/services/get_max_amount::SAMPLE_HOT_WALLET_BALANCE
     expect(response.max_amount).to eq 1
